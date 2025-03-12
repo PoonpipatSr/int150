@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            margin: 50px auto ;
+            width: 600px ;
+        }
+        table,th,td {
+            padding: 10px;
+            border: solid 1px gray ;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h3>How is an NFT Different From Other Cryptocurrencies?</h3>
+
+    <dl>
+        Although NFTs are created using the same kind of programming language as other cryptocurrencies, that's where 
+        the similarity ends.
+    </dl>
+    <table>
+        <thead>
+            <th>Other Cryptocurrency</th>
+            <th>NFT</th>
+        </thead>
+        <tbody>
+            <td>
+                Cryptocurrencies are “fungible”; they can be traded or exchanged for one another. They’re also equal in value.
+            </td>
+            <td>
+                Each NFT acts as a digital signature thatmakes it impossible for them to beexchanged for or equal to one another.
+            </td>
+        </tbody>
+        <tbody>
+            <td>
+                For example, one Bitcoin is always equal to another Bitcoin, or one Dollar is always equal to one Dollar.
+            </td>
+            <td>
+                For example, The Last Supper is a painting of a kind and cannot be exchanged withanother painting.
+            </td>
+        </tbody>
+    </table>
+
+    <p><a href="../index.html">Home</a></p>
+
+    <form action="comment" method="get">
+        <fieldset>
+            <legend>Write your comment</legend>
+
+            <input type="text" name="name" placeholder="Name" size="40">
+            <input type="text" name="email" placeholder="Email" size="40">
+            <textarea name="comment" placeholder="Enter your comment here" cols="80" rows="6"></textarea>
+
+            <fieldset>
+                <legend>Was this article helpful?</legend>
+                <input type="radio" name="rating" value="1">Poor
+                <input type="radio" name="rating" value="2">Below Average
+                <input type="radio" name="rating" value="3">Average
+                <input type="radio" name="rating" value="4">Above Average
+                <input type="radio" name="rating" value="5">Excellent
+            </fieldset>
+            <p><input type="checkbox" name="notifyme" value="yes">Notify me of following-up topics related to NFT</p>
+            <input type="submit" value="Post Comment">
+        </fieldset>
+    </form>
+</body>
+</html>
