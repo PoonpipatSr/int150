@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        box-sizing: border-box;
+      }
+      form {
+        box-sizing: inherit;
+        max-width: auto;
+        padding: 1em;
+      }
+      .field {
+        display: flex;
+        flex-direction: column;
+      }
+      label {
+        font-family: inherit;
+        margin-right: 1em;
+        margin-bottom: 4px;
+      }
+      input[type="text"] {
+        margin-bottom: 1em;
+        height: 2em;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        padding-left: 6px;
+        font-family: inherit;
+        border-radius: 3px;
+        width: 100%;
+      }
+      input[type="text"]:focus {
+        border: 1px solid rgba(0, 136, 255, 0.836);
+        outline: none;
+      }
+      input[type="checkbox"] {
+        margin: 0;
+        padding: 0;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+      }
+      button {
+        margin-top: 1em;
+        width: 6em;
+        height: 2.5em;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="form">
+      <div class="field">
+        <label>First Name</label>
+        <input type="text" name="first-name" placeholder="First Name" />
+      </div>
+      <div class="field">
+        <label>Last Name</label>
+        <input type="text" name="last-name" placeholder="Last Name" />
+      </div>
+      <div class="field">
+        <div class="checkbox">
+          <input type="checkbox" />
+          <label>I agree to the Terms and Conditions</label>
+        </div>
+      </div>
+      <button class="button" type="submit">Submit</button>
+    </form>
+  </body>
+</html>
