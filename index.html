@@ -1,44 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Working Space</title>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <title>สวัสดีครับ</title>
     <style>
-        a {
-            color: black;
-            text-decoration: none;
+      body {
+        background-color: black;
+        height: 100vh;
+        margin: 0;
+        position: relative;
+        overflow: hidden;
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #runaway-btn {
+        position: absolute;
+        padding: 40px 80px;
+        background-color: #ff4d4d;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: top 0.2s, left 0.2s;
+        font-size: 50px;
+      }
+
+      .checkbox-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+        font-size: 36px;
+        color: #fff;
+        input[type="checkbox"] {
+          transform: scale(2.5);
+          margin-right: 18px;
+          cursor: pointer;
         }
-        button {
-            display: block;
-        }
-        .red {
-            color: red;
-        }
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      h2 {
+        color: red;
+      }
+
+      .warn {
+        margin-bottom: 800px;
+      }
     </style>
-</head>
-<body>
-    <span class="red">!!! Please use backward button on your browser if you want to turn back to this page !!!</span>
-    <hr>
-    <button><a href="lab1/index.html">lab 1</a></button><br>
-    <button><a href="lab2/index.html">lab 2</a></button><br>
-    <button><a href="lab3/index.html">lab 3</a></button><br>
-    <button><a href="lab4/index.html">lab 4-1</a></button><br>
-    <button><a href="lab4/movies.html">lab 4-2</a></button><br>
-    <button><a href="lab5/index.html">lab 5</a></button><br>
-    <button><a href="lab6/index.html">lab 6</a></button><br>
-    <button><a href="lab7/1/index.html">lab 7-1</a></button><br>
-    <button><a href="lab7/2/index.html">lab 7-2</a></button><br>
-    <button><a href="lab8/index.html">lab 8</a></button><br>
-    <button><a href="lab9/index.html">lab 9</a></button><br>
-    <button><a href="lab10/index.html">lab 10</a></button><br>
-    <button><a href="lab11/index.html">lab 11</a></button><br>
-    <button><a href="lab12/index.html">lab 12</a></button><br>
-    <button><a href="lab13/bakery.html">lab 13</a></button><br>
-    <button><a href="lab14/67130500105-lab14-1.html">lab 14-1</a></button><br>
-    <button><a href="lab14/67130500105-lab14-2.html">lab 14-2</a></button><br>
-    <button><a href="lab15/sneakerform.html">lab 15</a></button><br>
-    <button><a href="lab15-2/67130500105.html">lab 15-2</a></button><br><hr><br>
-    <span>Poonpipat Sirimukarkom 67130500105</span><br>
-</body>
+  </head>
+  <body>
+    <button id="runaway-btn">
+      <a href="mainpage.html">Go to main page</a>
+    </button>
+
+    <div class="checkbox-container">
+      <h2 class="warn">
+        Please use the back button in your browser if you want to return to main
+        page.
+      </h2>
+      <label>
+        <input type="checkbox" id="accept-checkbox" />
+        Check the checkbox to Accept the terms &amp; Stop the misbehave button
+      </label>
+    </div>
+
+    <script>
+      const runawayBtn = document.getElementById("runaway-btn");
+      const checkbox = document.getElementById("accept-checkbox");
+
+      function isAccepted() {
+        return checkbox.checked;
+      }
+
+      runawayBtn.addEventListener("mouseover", () => {
+        if (!isAccepted()) {
+          const maxX = window.innerWidth - runawayBtn.offsetWidth;
+          const maxY = window.innerHeight - runawayBtn.offsetHeight;
+
+          const randomX = Math.random() * maxX;
+          const randomY = Math.random() * maxY;
+
+          runawayBtn.style.left = `${randomX}px`;
+          runawayBtn.style.top = `${randomY}px`;
+        }
+      });
+      runawayBtn.style.left = "50%";
+      runawayBtn.style.top = "40%";
+      runawayBtn.style.transform = "translate(-50%, -50%)";
+    </script>
+  </body>
 </html>
